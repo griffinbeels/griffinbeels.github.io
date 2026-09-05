@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Miji — Search once, remember forever</title>
+<meta name="description" content="Look up a word, tap Remember, and it comes back until you know it — in notifications you answer from your lock screen. No decks. No account. No server.">
+<link rel="canonical" href="https://griffinbeels.github.io/miji/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFF3DC">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1226">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Miji">
+<meta property="og:title" content="Miji — Search once, remember forever">
+<meta property="og:description" content="Look up a word, tap Remember, and it comes back until you know it — in notifications you answer from your lock screen. No decks. No account. No server.">
+<meta property="og:url" content="https://griffinbeels.github.io/miji/">
+<meta property="og:image" content="https://griffinbeels.github.io/miji/assets/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Miji — Search once, remember forever">
+<meta name="twitter:description" content="Look up a word, tap Remember, and it comes back until you know it — in notifications you answer from your lock screen. No decks. No account. No server.">
+<meta name="twitter:image" content="https://griffinbeels.github.io/miji/assets/icon-512.png">
+<meta name="apple-mobile-web-app-title" content="Miji">
+<link rel="icon" href="assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://griffinbeels.github.io/miji/#app",
+   "name": "Miji",
+   "alternateName": "Miji – Dictionary & Flashcards",
+   "slogan": "Search once, remember forever",
+   "description": "Miji is a dictionary that remembers for you. Look up a word, tap Remember, and Miji turns it into flashcards and brings it back — in notifications you answer from your lock screen — until you genuinely know it.",
+   "applicationCategory": "EducationApplication",
+   "applicationSubCategory": "Dictionary, vocabulary, flashcards",
+   "operatingSystem": "iOS 26.0 or later",
+   "softwareVersion": "1.0",
+   "url": "https://griffinbeels.github.io/miji/",
+   "featureList": [
+    "SEARCH WORDS EASILY",
+    "REMEMBER WORDS FOREVER",
+    "NOTIFICATIONS OPTIMIZED FOR MEMORY",
+    "RANK UP YOUR KNOWLEDGE"
+   ],
+   "screenshot": [
+    "https://griffinbeels.github.io/miji/assets/feed-light.png",
+    "https://griffinbeels.github.io/miji/assets/word-light.png",
+    "https://griffinbeels.github.io/miji/assets/remember-light.png",
+    "https://griffinbeels.github.io/miji/assets/banner.jpg",
+    "https://griffinbeels.github.io/miji/assets/progress-light.png"
+   ],
+   "author": {
+    "@type": "Person",
+    "name": "Griffin Beels"
+   },
+   "inLanguage": "en",
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://griffinbeels.github.io/miji/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Miji?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A dictionary for iPhone that turns the words you look up into flashcards, then brings them back in notifications until you know them. Search once, remember forever."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is Miji different from Anki or Quizlet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You never make a card. Anki and Quizlet are card managers: you build decks, then study them. In Miji the dictionary is the front door — look a word up, tap Remember, done. The scheduling is the same science Anki uses (FSRS); the work of making and organizing cards is gone."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Miji make flashcards automatically?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Tap Remember on any word and Miji creates two cards on its own: one that asks what the word means, and one that asks for the word from its meaning. Nothing to type."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I answer a flashcard from the notification without opening the app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The notification is the flashcard. It shows the word, and you tap Knew or Forgot right there on the lock screen. Press and hold to see the whole card first."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Miji need an account or an internet connection?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No and no. The whole dictionary is on your phone, there is no account, and nothing you save leaves the device. The App Store privacy label is \"Data Not Collected.\""
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What spaced-repetition algorithm does Miji use?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "FSRS-6, the open-source algorithm behind modern Anki. It predicts when you are about to forget each word and asks just before."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens when I forget a word?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It comes back within 30 minutes, and you get the same credit as if you had known it. Forgetting is part of learning; Miji never punishes it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Miji only for English?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For now, yes: 85,000 English words from Wiktionary and Open English WordNet. Other languages, iCloud sync, widgets and Siri are not in yet."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which iPhones does Miji run on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Any iPhone on iOS 26 or later."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does Miji cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The TestFlight beta is free."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where does the dictionary come from?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wiktionary (through Wiktextract) and Open English WordNet, ranked by word frequency. The database Miji ships is CC BY-SA."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://griffinbeels.github.io/miji/#site",
+   "url": "https://griffinbeels.github.io/miji/",
+   "name": "Miji"
+  }
+ ]
+}
+</script>
+<style>
+/* Miji site — inlined into index.html and privacy.html by tools/site/build.py.
+   The palette is MijiPalette's own tokens (Packages/MijiDesign/…/MijiPalette.swift),
+   light and dark, so the page and the app are one colour system. */
+
+:root {
+  --ground: #FFF3DC;        /* paperIvory / surfaceBase */
+  --surface: #FFFBF2;       /* surfaceElevated */
+  --ink: #101B33;           /* textPrimary */
+  --ink-2: #4C5876;         /* textSecondary */
+  --hair: #EBDCBE;          /* hairline */
+  --blue: #173B8F;          /* memoryBlue */
+  --jade: #0F7A5E;          /* livingJade */
+  --berry: #C1306F;         /* recallRaspberry */
+  --berry-ink: #FFF3DC;
+  --frame: #0E398F;         /* launchGround */
+  --shadow: 16, 27, 51;
+  --serif: ui-serif, "New York", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, "Segoe UI", system-ui, sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #0A1226;
+    --surface: #131F3B;
+    --ink: #FFF3DC;
+    --ink-2: #A6B3CE;
+    --hair: #24314F;
+    --blue: #8AA9F2;
+    --jade: #34B995;
+    --berry: #F16F91;
+    --berry-ink: #0A1226;
+    --frame: #0E398F;
+    --shadow: 0, 0, 0;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(1.0625rem, 0.98rem + 0.35vw, 1.1875rem);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture { max-width: 100%; display: block; }
+a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; line-height: 1.1; margin: 0 0 0.5em; text-wrap: balance; }
+h1 { font-size: clamp(2.5rem, 1.6rem + 4.2vw, 4.75rem); }
+h2 { font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.6rem); }
+h3 { font-size: 1.25rem; line-height: 1.3; }
+p { margin: 0 0 1em; }
+.wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0.5rem; background: var(--ink); color: var(--ground); padding: 0.5rem 0.75rem; border-radius: 0.5rem; z-index: 10; }
+.skip:focus { left: 0.5rem; }
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5ch;
+  font-family: var(--sans); font-weight: 650; font-size: 1.0625rem; line-height: 1;
+  padding: 0.95em 1.5em; border-radius: 999px; text-decoration: none;
+  border: 2px solid transparent; white-space: nowrap;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+.cta--primary { background: var(--berry); color: var(--berry-ink); box-shadow: 0 10px 24px -12px rgba(var(--shadow), 0.55); }
+.cta--primary:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -12px rgba(var(--shadow), 0.6); }
+.cta--secondary { background: var(--surface); color: var(--ink); border-color: var(--hair); }
+.cta--secondary:hover { border-color: var(--berry); }
+.cta--ghost { background: transparent; color: var(--ink-2); border-color: transparent; padding-inline: 0.75em; }
+.cta--pending { cursor: default; opacity: 0.85; }
+.cta:active { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .cta { transition: none; } .cta:hover { transform: none; } }
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--ground) 86%, transparent); backdrop-filter: saturate(160%) blur(12px); -webkit-backdrop-filter: saturate(160%) blur(12px); border-bottom: 1px solid var(--hair); }
+.top__row { display: flex; align-items: center; gap: 1rem; min-height: 64px; }
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--serif); font-weight: 700; font-size: 1.35rem; color: var(--ink); text-decoration: none; }
+.brand img { border-radius: 10px; }
+.top__nav { display: none; gap: 1.25rem; margin-left: auto; }
+.top__nav a { color: var(--ink-2); text-decoration: none; font-weight: 500; }
+.top__nav a:hover { color: var(--ink); }
+.top__cta { margin-left: auto; }
+.top__cta .cta { padding: 0.7em 1.1em; font-size: 0.95rem; }
+@media (min-width: 720px) { .top__nav { display: flex; } .top__cta { margin-left: 0; } }
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+.hero { padding: clamp(2.5rem, 6vw, 6rem) 0 clamp(2rem, 5vw, 4rem); position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: -20% -10% auto; height: 70%; z-index: -1; pointer-events: none;
+  background: radial-gradient(60% 60% at 70% 30%, color-mix(in srgb, var(--blue) 18%, transparent), transparent 70%),
+              radial-gradient(40% 50% at 20% 60%, color-mix(in srgb, var(--jade) 14%, transparent), transparent 70%);
+}
+.hero__grid { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 880px) { .hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: 3rem; } }
+.eyebrow { font-family: var(--sans); font-weight: 650; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--jade); margin: 0 0 1rem; }
+.eyebrow--hero { color: var(--blue); }
+.hero__intro { max-width: 40rem; }
+.hero__intro p:first-child { font-size: clamp(1.15rem, 1rem + 0.7vw, 1.4rem); color: var(--ink); }
+.hero__intro p { color: var(--ink-2); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; margin: 1.5rem 0 0.75rem; }
+.hero__fine { color: var(--ink-2); font-size: 0.9rem; margin: 0; }
+
+/* ── Phone frame / media ─────────────────────────────────────────────────── */
+.media { display: flex; justify-content: center; }
+.media--phone picture {
+  display: block; width: min(320px, 72vw); aspect-ratio: 1206 / 2622;
+  padding: 10px; border-radius: 52px; background: #0b1020;
+  box-shadow: 0 40px 80px -30px rgba(var(--shadow), 0.55), inset 0 0 0 2px #2a3352;
+}
+.media--phone picture img { width: 100%; height: 100%; object-fit: cover; border-radius: 42px; background: #0b1020; }
+.media--hero picture { width: min(340px, 72vw); }
+.media--wide picture { display: block; width: min(640px, 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px -28px rgba(var(--shadow), 0.55); }
+.media--wide picture img { width: 100%; height: auto; border-radius: 20px; }
+
+/* ── Marquee strip ───────────────────────────────────────────────────────── */
+.strip { border-block: 1px solid var(--hair); background: var(--surface); overflow: hidden; padding: 0.7rem 0; margin: 1rem 0 0; }
+.strip__track { display: flex; gap: 3rem; width: max-content; font-family: var(--serif); font-size: 1.1rem; color: var(--ink-2); white-space: nowrap; animation: slide 40s linear infinite; }
+.strip__track span:nth-child(4n+1) { color: var(--berry); font-weight: 600; }
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .strip__track { animation: none; } }
+
+/* ── Features ────────────────────────────────────────────────────────────── */
+.features { padding: clamp(2.5rem, 6vw, 5rem) 0 1rem; }
+.section-kicker { font-family: var(--serif); font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem); color: var(--ink-2); margin: 0 0 1rem; }
+.feature { display: grid; gap: 2rem; align-items: center; padding: clamp(2rem, 5vw, 4.5rem) 0; border-top: 1px solid var(--hair); }
+@media (min-width: 880px) {
+  .feature { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .feature--flip .feature__text { order: 2; }
+  .feature--flip .media { order: 1; }
+}
+.feature__text p { color: var(--ink-2); max-width: 36rem; }
+.feature__text h2 { color: var(--ink); }
+.feature__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 1.5rem; }
+.tagline-echo { font-family: var(--serif); color: var(--ink-2); font-style: italic; }
+
+/* ── Band ────────────────────────────────────────────────────────────────── */
+.band { margin: clamp(2rem, 5vw, 4rem) 0; }
+.band__inner { background: linear-gradient(135deg, var(--blue), color-mix(in srgb, var(--blue) 70%, var(--jade))); color: #FFF3DC; border-radius: 28px; padding: clamp(2rem, 5vw, 3.5rem); display: grid; gap: 1.5rem; align-items: center; box-shadow: 0 30px 60px -30px rgba(var(--shadow), 0.6); }
+@media (min-width: 880px) { .band__inner { grid-template-columns: 1.4fr auto; } }
+.band__text p { font-family: var(--serif); font-size: clamp(1.35rem, 1.1rem + 1.2vw, 2rem); line-height: 1.25; margin: 0; text-wrap: balance; }
+.band .cta--primary { background: #FFF3DC; color: #173B8F; }
+.band .cta--pending { background: rgba(255, 243, 220, 0.18); color: #FFF3DC; border-color: rgba(255, 243, 220, 0.5); }
+
+/* ── FAQ ─────────────────────────────────────────────────────────────────── */
+.faq { padding: 1rem 0 clamp(2.5rem, 6vw, 5rem); }
+.faq__grid { display: grid; gap: 1.25rem; }
+@media (min-width: 720px) { .faq__grid { grid-template-columns: 1fr 1fr; gap: 1.5rem 2.5rem; } }
+.faq__item { background: var(--surface); border: 1px solid var(--hair); border-radius: 18px; padding: 1.25rem 1.4rem; }
+.faq__item h3 { margin-bottom: 0.4em; }
+.faq__item p { color: var(--ink-2); margin: 0; }
+.faq__item p + p { margin-top: 0.6em; }
+.faq__cta { margin: 2rem 0 0; }
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.foot { border-top: 1px solid var(--hair); padding: 2.5rem 0 calc(2.5rem + 72px); color: var(--ink-2); font-size: 0.95rem; }
+.foot__tag { font-family: var(--serif); font-size: 1.35rem; color: var(--ink); margin-bottom: 1rem; }
+.facts { list-style: none; padding: 0; margin: 0 0 1.25rem; display: flex; flex-wrap: wrap; gap: 0.4rem 0; }
+.facts li + li::before { content: "·"; margin: 0 0.6rem; color: var(--hair); }
+.foot__links a { color: var(--ink-2); }
+@media (min-width: 720px) { .foot { padding-bottom: 2.5rem; } }
+
+/* ── Sticky mobile CTA ───────────────────────────────────────────────────── */
+.sticky { position: fixed; inset: auto 0 0; z-index: 6; padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--ground) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--hair); }
+.sticky__inner { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; max-width: 640px; margin-inline: auto; }
+.sticky__label { font-family: var(--serif); font-size: 0.95rem; color: var(--ink-2); }
+.sticky .cta { padding: 0.75em 1.2em; font-size: 0.95rem; }
+@media (min-width: 720px) { .sticky { display: none; } }
+
+/* ── Scroll-in (JS + motion allowed only) ────────────────────────────────── */
+.js-motion .reveal { opacity: 0; transform: translateY(14px); transition: opacity 600ms ease, transform 600ms cubic-bezier(.2,.7,.2,1); }
+.js-motion .reveal.in { opacity: 1; transform: none; }
+
+/* ── Privacy page ────────────────────────────────────────────────────────── */
+.doc { padding: clamp(2rem, 5vw, 4rem) 0; max-width: 42rem; }
+.doc h1 { font-size: clamp(2rem, 1.5rem + 2vw, 3rem); }
+.doc p, .doc li { color: var(--ink-2); }
+.doc strong { color: var(--ink); }
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top__row">
+    <a class="brand" href="https://griffinbeels.github.io/miji/" aria-label="Miji home">
+      <img src="assets/icon-192.png" alt="" width="40" height="40">
+      <span>Miji</span>
+    </a>
+    <nav class="top__nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="top__cta"><span class="cta cta--primary cta--pending" role="status" data-context="hero">TestFlight link coming shortly</span></div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="tagline">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow eyebrow--hero">A dictionary for iPhone</p>
+        <h1 id="tagline">Search once, remember forever.</h1>
+        <div class="hero__intro"><p>Miji is a dictionary that remembers for you. Look up a word, tap Remember, and Miji turns it into flashcards and brings it back — in notifications you answer from your lock screen — until you genuinely know it.</p><p>Backed by memory science. Miji's notification-based system makes it hard NOT to memorize words.</p></div>
+        <div class="hero__actions">
+          <span class="cta cta--primary cta--pending" role="status" data-context="hero">TestFlight link coming shortly</span>
+          <a class="cta cta--ghost" href="#how">See how it works ↓</a>
+        </div>
+        <p class="hero__fine">iPhone · iOS 26 or later · English · Works offline · No account</p>
+      </div>
+      <div class="media media--phone media--hero"><picture><source srcset="assets/feed-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/feed-light.png" alt="Miji&#x27;s home screen: the search field on top, and below it every saved word in the order it will come back — due words first." width="640" height="1391" loading="eager" decoding="async"></picture></div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="strip__track">
+      <span>Search once, remember forever.</span><span>Look it up.</span><span>Tap Remember.</span><span>It comes back until you know it.</span>
+      <span>Search once, remember forever.</span><span>Look it up.</span><span>Tap Remember.</span><span>It comes back until you know it.</span>
+    </div>
+  </div>
+
+  <div id="how" class="features wrap">
+    <p class="section-kicker reveal">How it works</p>
+    <section class="feature reveal" id="search-words-easily" aria-labelledby="search-words-easily-h"><div class="feature__text"><p class="eyebrow">01</p><h2 id="search-words-easily-h">SEARCH WORDS EASILY</h2><p>A real dictionary, built in and offline: 85,000 English words with pronunciations, examples and synonyms. Type it, paste it, or share it to Miji from any app.</p><p class="feature__cta"><span class="cta cta--secondary cta--pending" role="status" data-context="search-words-easily">TestFlight link coming shortly</span><span class="tagline-echo">Search once, remember forever.</span></p></div><div class="media media--phone"><picture><source srcset="assets/word-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/word-light.png" alt="A word page in Miji: the headword, its pronunciation, its senses with example sentences, and the Remember button." width="640" height="1391" loading="lazy" decoding="async"></picture></div></section>
+<section class="feature feature--flip reveal" id="remember-words-forever" aria-labelledby="remember-words-forever-h"><div class="feature__text"><p class="eyebrow">02</p><h2 id="remember-words-forever-h">REMEMBER WORDS FOREVER</h2><p>Ever feel overwhelmed at the idea of making flashcards for every word you look up in the dictionary? Absurdly time-consuming. Now? It's one tap. The cards make themselves... and tell you when it's time to study.</p><p class="feature__cta"><span class="cta cta--secondary cta--pending" role="status" data-context="remember-words-forever">TestFlight link coming shortly</span><span class="tagline-echo">Search once, remember forever.</span></p></div><div class="media media--phone"><picture><source srcset="assets/remember-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/remember-light.png" alt="The Remember button pressed: the word is saved, the celebration plays, and an Undo stands for five seconds." width="640" height="1391" loading="lazy" decoding="async"></picture></div></section>
+<section class="feature reveal" id="notifications-optimized-for-memory" aria-labelledby="notifications-optimized-for-memory-h"><div class="feature__text"><p class="eyebrow">03</p><h2 id="notifications-optimized-for-memory-h">NOTIFICATIONS OPTIMIZED FOR MEMORY</h2><p>Miji learns how well you know each word and asks again right before you'd forget, using the same spaced-repetition science behind Anki (FSRS). The notification is the flashcard: tap Knew or Forgot and you're done. Forgetting is part of learning, but Miji will NEVER forget to notify you when it's time to challenge your memory! It's impossible NOT to remember words if you stay consistent with Miji!</p><p class="feature__cta"><span class="cta cta--secondary cta--pending" role="status" data-context="notifications-optimized-for-memory">TestFlight link coming shortly</span><span class="tagline-echo">Search once, remember forever.</span></p></div><div class="media media--wide"><picture><img src="assets/banner.jpg" alt="A real Miji notification on the iPhone lock screen: the question, the word, and the hint to press and hold for the whole card." width="1206" height="420" loading="lazy" decoding="async"></picture></div></section>
+<section class="feature feature--flip reveal" id="rank-up-your-knowledge" aria-labelledby="rank-up-your-knowledge-h"><div class="feature__text"><p class="eyebrow">04</p><h2 id="rank-up-your-knowledge-h">RANK UP YOUR KNOWLEDGE</h2><p>Every word has a study-rank. Every answer (knew it or forgot it) gives you XP, because your goal is to practice, not be perfect the first time. Earn XP, and bask in the accomplishment you'll feel when every word-sprout grows into an evergreen-staple of your vocabulary!</p><p class="feature__cta"><span class="cta cta--secondary cta--pending" role="status" data-context="rank-up-your-knowledge">TestFlight link coming shortly</span><span class="tagline-echo">Search once, remember forever.</span></p></div><div class="media media--phone"><picture><source srcset="assets/progress-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/progress-light.png" alt="Miji&#x27;s progress screen: total XP, the current level, and how many words stand at each stage from sprout to evergreen." width="640" height="1391" loading="lazy" decoding="async"></picture></div></section>
+  </div>
+
+  <section class="band reveal" aria-labelledby="close-h">
+    <div class="wrap band__inner">
+      <h2 id="close-h" class="visually-hidden">Try Miji</h2>
+      <div class="band__text"><p>If you've ever looked a word up, and immediately forgot it 5 minutes later, Miji's got your back. Search once, remember forever.</p></div>
+      <div class="band__cta"><span class="cta cta--primary cta--pending" role="status" data-context="close">TestFlight link coming shortly</span></div>
+    </div>
+  </section>
+
+  <section class="faq wrap" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions people ask</h2>
+    <div class="faq__grid">
+      <div class="faq__item"><h3>What is Miji?</h3><p>A dictionary for iPhone that turns the words you look up into flashcards, then brings them back in notifications until you know them. Search once, remember forever.</p></div>
+<div class="faq__item"><h3>How is Miji different from Anki or Quizlet?</h3><p>You never make a card. Anki and Quizlet are card managers: you build decks, then study them. In Miji the dictionary is the front door — look a word up, tap Remember, done. The scheduling is the same science Anki uses (FSRS); the work of making and organizing cards is gone.</p></div>
+<div class="faq__item"><h3>Does Miji make flashcards automatically?</h3><p>Yes. Tap Remember on any word and Miji creates two cards on its own: one that asks what the word means, and one that asks for the word from its meaning. Nothing to type.</p></div>
+<div class="faq__item"><h3>Can I answer a flashcard from the notification without opening the app?</h3><p>Yes. The notification is the flashcard. It shows the word, and you tap Knew or Forgot right there on the lock screen. Press and hold to see the whole card first.</p></div>
+<div class="faq__item"><h3>Does Miji need an account or an internet connection?</h3><p>No and no. The whole dictionary is on your phone, there is no account, and nothing you save leaves the device. The App Store privacy label is "Data Not Collected."</p></div>
+<div class="faq__item"><h3>What spaced-repetition algorithm does Miji use?</h3><p>FSRS-6, the open-source algorithm behind modern Anki. It predicts when you are about to forget each word and asks just before.</p></div>
+<div class="faq__item"><h3>What happens when I forget a word?</h3><p>It comes back within 30 minutes, and you get the same credit as if you had known it. Forgetting is part of learning; Miji never punishes it.</p></div>
+<div class="faq__item"><h3>Is Miji only for English?</h3><p>For now, yes: 85,000 English words from Wiktionary and Open English WordNet. Other languages, iCloud sync, widgets and Siri are not in yet.</p></div>
+<div class="faq__item"><h3>Which iPhones does Miji run on?</h3><p>Any iPhone on iOS 26 or later.</p></div>
+<div class="faq__item"><h3>What does Miji cost?</h3><p>The TestFlight beta is free.</p></div>
+<div class="faq__item"><h3>Where does the dictionary come from?</h3><p>Wiktionary (through Wiktextract) and Open English WordNet, ranked by word frequency. The database Miji ships is CC BY-SA.</p></div>
+    </div>
+    <p class="faq__cta"><span class="cta cta--primary cta--pending" role="status" data-context="close">TestFlight link coming shortly</span></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__tag">Search once, remember forever.</p>
+    <ul class="facts"><li>iPhone, iOS 26 or later</li><li>English</li><li>85,000 words, 230,000 senses, 195,000 example sentences</li><li>Works offline</li><li>No account</li><li>Data Not Collected</li><li>Dictionary from Wiktionary and Open English WordNet (CC BY-SA)</li></ul>
+    <p class="foot__links">
+      <a href="privacy.html">Privacy</a> ·
+      <a href="llms.txt">llms.txt</a> ·
+      <span>© 2026 Griffin Beels</span>
+    </p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky" hidden>
+  <div class="sticky__inner">
+    <span class="sticky__label">Search once, remember forever.</span>
+    <span class="cta cta--primary cta--pending" role="status" data-context="sticky">TestFlight link coming shortly</span>
+  </div>
+</div>
+
+<script>
+// Progressive enhancement only. Everything above is visible with this file
+// unread; this adds the scroll-in and the mobile sticky bar, and neither runs
+// for a reader who asked for reduced motion.
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sticky = document.getElementById('sticky');
+  var hero = document.querySelector('.hero');
+  if ('IntersectionObserver' in window) {
+    if (!reduce) {
+      document.documentElement.classList.add('js-motion');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    }
+    if (sticky && hero) {
+      new IntersectionObserver(function (entries) {
+        sticky.hidden = entries[0].isIntersecting;
+      }, { threshold: 0 }).observe(hero);
+    }
+  }
+})();
+</script>
+</body>
+</html>

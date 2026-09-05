@@ -1,0 +1,23 @@
+# Miji
+
+> Miji is a dictionary that remembers for you. Look up a word, tap Remember, and Miji turns it into flashcards and brings it back — in notifications you answer from your lock screen — until you genuinely know it.
+
+Search once, remember forever.
+
+Miji is an iPhone app (iOS 26 or later). Backed by memory science. Miji's notification-based system makes it hard NOT to memorize words.
+
+## Facts
+
+- iPhone, iOS 26 or later
+- English
+- 85,000 words, 230,000 senses, 195,000 example sentences
+- Works offline
+- No account
+- Data Not Collected
+- Dictionary from Wiktionary and Open English WordNet (CC BY-SA)
+
+## Links
+
+- [Miji](https://griffinbeels.github.io/miji/): the app's site — what it does, how it works, FAQ
+- [Privacy](https://griffinbeels.github.io/miji/privacy.html): Data Not Collected
+- [Full copy](https://griffinbeels.github.io/miji/llms-full.txt): every word on the site, as plain text
